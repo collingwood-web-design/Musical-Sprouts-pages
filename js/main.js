@@ -1,6 +1,16 @@
 (function () {
+  var header = document.querySelector("header.site");
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector("nav.main");
+
+  function updateHeader() {
+    if (!header) return;
+    header.classList.toggle("is-scrolled", window.scrollY > 20);
+  }
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+
   if (!toggle || !nav) return;
 
   toggle.addEventListener("click", function () {
