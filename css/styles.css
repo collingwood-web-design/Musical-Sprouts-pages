@@ -100,7 +100,8 @@ header.site.is-scrolled {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 18px 0;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .brand {
@@ -294,7 +295,8 @@ header.site.is-scrolled .nav-toggle {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 140px 0 72px;
+  padding-top: 140px;
+  padding-bottom: 72px;
 }
 
 .hero-home .brand-mark {
@@ -1182,6 +1184,21 @@ footer a {
     padding-right: max(32px, env(safe-area-inset-right, 0px));
   }
 
+  .hero-home {
+    align-items: center;
+  }
+
+  .hero-home__content {
+    padding-top: 110px;
+    padding-bottom: 48px;
+  }
+
+  .hero-home__shade {
+    background:
+      linear-gradient(180deg, rgba(51, 70, 63, 0.42) 0%, rgba(51, 70, 63, 0.45) 45%, rgba(51, 70, 63, 0.72) 100%),
+      radial-gradient(ellipse at 20% 20%, rgba(107, 148, 132, 0.35), transparent 55%);
+  }
+
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1243,8 +1260,8 @@ footer a {
   }
 
   .wrap {
-    padding-left: max(24px, env(safe-area-inset-left, 0px));
-    padding-right: max(24px, env(safe-area-inset-right, 0px));
+    padding-left: max(28px, env(safe-area-inset-left, 0px));
+    padding-right: max(28px, env(safe-area-inset-right, 0px));
   }
 
   .cards,
@@ -1263,7 +1280,39 @@ footer a {
   }
 
   .hero-home__content {
-    padding: 120px 0 56px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .hero-home .brand-mark {
+    margin-bottom: 16px;
+  }
+
+  .hero-home .brand-mark img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .hero-home .brand-mark strong {
+    font-size: clamp(22px, 7vw, 30px);
+  }
+
+  .hero-home h1 {
+    font-size: clamp(26px, 7.5vw, 34px);
+  }
+
+  .hero-home .lede {
+    font-size: 17px;
+  }
+
+  .hero-home .actions {
+    margin-top: 22px;
+  }
+
+  .hero-home .actions .btn {
+    flex: 1 1 auto;
+    text-align: center;
+    min-width: min(100%, 160px);
   }
 
   .hero-page {
