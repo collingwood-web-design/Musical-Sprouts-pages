@@ -49,7 +49,9 @@ img {
 .wrap {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 clamp(28px, 5.5vw, 40px);
+  padding-left: max(28px, env(safe-area-inset-left, 0px));
+  padding-right: max(28px, env(safe-area-inset-right, 0px));
 }
 
 a {
@@ -1174,7 +1176,12 @@ footer a {
 }
 
 /* Responsive */
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
+  .wrap {
+    padding-left: max(32px, env(safe-area-inset-left, 0px));
+    padding-right: max(32px, env(safe-area-inset-right, 0px));
+  }
+
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1210,8 +1217,8 @@ footer a {
     display: none;
     position: absolute;
     top: 72px;
-    right: 24px;
-    left: 24px;
+    right: max(32px, env(safe-area-inset-right, 0px));
+    left: max(32px, env(safe-area-inset-left, 0px));
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
@@ -1235,6 +1242,11 @@ footer a {
     font-size: 16px;
   }
 
+  .wrap {
+    padding-left: max(24px, env(safe-area-inset-left, 0px));
+    padding-right: max(24px, env(safe-area-inset-right, 0px));
+  }
+
   .cards,
   .savings,
   .parties,
@@ -1256,6 +1268,11 @@ footer a {
 
   .hero-page {
     padding: 100px 0 72px;
+  }
+
+  nav.main {
+    right: max(24px, env(safe-area-inset-right, 0px));
+    left: max(24px, env(safe-area-inset-left, 0px));
   }
 
   thead {
