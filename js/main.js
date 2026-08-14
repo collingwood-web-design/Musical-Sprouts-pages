@@ -1,11 +1,17 @@
 (function () {
   var header = document.querySelector("header.site");
+  var logo = document.querySelector("header.site .brand-logo");
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector("nav.main");
 
   function updateHeader() {
     if (!header) return;
-    header.classList.toggle("is-scrolled", window.scrollY > 20);
+    var scrolled = window.scrollY > 20;
+    header.classList.toggle("is-scrolled", scrolled);
+    if (logo && logo.dataset.logoWhite && logo.dataset.logoColour) {
+      var next = scrolled ? logo.dataset.logoColour : logo.dataset.logoWhite;
+      if (logo.getAttribute("src") !== next) logo.setAttribute("src", next);
+    }
   }
 
   updateHeader();

@@ -113,36 +113,11 @@ header.site.is-scrolled {
   transition: color 0.25s ease;
 }
 
-.brand-logos {
-  position: relative;
+.brand-logo {
   flex: 0 0 42px;
   width: 42px;
   height: 42px;
-}
-
-.brand-logo {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
   object-fit: contain;
-  transition: opacity 0.25s ease;
-}
-
-.brand-logo--white {
-  opacity: 1;
-}
-
-.brand-logo--colour {
-  opacity: 0;
-}
-
-header.site.is-scrolled .brand-logo--white {
-  opacity: 0;
-}
-
-header.site.is-scrolled .brand-logo--colour {
-  opacity: 1;
 }
 
 .brand > span:last-child {
