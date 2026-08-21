@@ -1447,6 +1447,15 @@ footer a {
     grid-template-columns: 1fr;
   }
 
+  .cls .thumb--mark {
+    aspect-ratio: 2.2 / 1;
+  }
+
+  .cls .thumb--mark img {
+    width: 36%;
+    max-height: 78%;
+  }
+
   .teaser--flip .teaser__copy,
   .teaser--flip .teaser__visual {
     order: unset;
@@ -1506,6 +1515,15 @@ footer a {
 @media (max-width: 760px) {
   body {
     font-size: 16px;
+  }
+
+  .cls .thumb--mark {
+    aspect-ratio: 16 / 10;
+  }
+
+  .cls .thumb--mark img {
+    width: 52%;
+    max-height: 82%;
   }
 
   .wrap {
