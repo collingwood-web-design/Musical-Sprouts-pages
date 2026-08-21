@@ -1,0 +1,18 @@
+{
+  "name": "Musical Sprouts",
+  "short_name": "Musical Sprouts",
+  "description": "Toddler and preschool music classes in Collingwood, Ontario.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDF3EF",
+  "theme_color": "#6B9484",
+  "lang": "en-CA",
+  "icons": [
+    {
+      "src": "https://media.cwd-cdn.com/musical-sprouts/images/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

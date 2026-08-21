@@ -22,6 +22,7 @@
   toggle.addEventListener("click", function () {
     var open = nav.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     toggle.textContent = open ? "Close" : "Menu";
   });
 
@@ -29,6 +30,7 @@
     link.addEventListener("click", function () {
       nav.classList.remove("is-open");
       toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open menu");
       toggle.textContent = "Menu";
     });
   });
