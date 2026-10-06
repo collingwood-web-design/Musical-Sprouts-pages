@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-CA">
 <head>
+    <script>
+      /* Prefer clean URLs when someone lands on the .html form (http/https only). */
+      (function () {
+        if (window.location.protocol === "file:") return;
+        var path = window.location.pathname;
+        if (!/\.html$/i.test(path)) return;
+        var clean = path.replace(/\.html$/i, "");
+        if (/\/index$/i.test(clean)) clean = clean.replace(/\/index$/i, "/") || "/";
+        if (clean === "") clean = "/";
+        window.location.replace(clean + window.location.search + window.location.hash);
+      })();
+    </script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pricing &amp; Registration — Musical Sprouts | Collingwood, ON</title>
@@ -12,7 +25,7 @@
   <meta name="geo.position" content="44.4924392;-80.1753303" />
   <meta name="ICBM" content="44.4924392, -80.1753303" />
   <meta name="theme-color" content="#6B9484" />
-  <link rel="canonical" href="https://musicalsprouts.com/pricing.html" />
+  <link rel="canonical" href="https://musicalsprouts.com/pricing" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="icon" href="https://media.cwd-cdn.com/musical-sprouts/images/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="https://media.cwd-cdn.com/musical-sprouts/images/favicon.png" />
@@ -28,7 +41,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Musical Sprouts" />
   <meta property="og:locale" content="en_CA" />
-  <meta property="og:url" content="https://musicalsprouts.com/pricing.html" />
+  <meta property="og:url" content="https://musicalsprouts.com/pricing" />
   <meta property="og:title" content="Pricing &amp; Registration — Musical Sprouts" />
   <meta property="og:description" content="Fall 2026 pricing for Musical Sprouts classes, memberships, and birthday parties in Collingwood." />
   <meta property="og:image" content="https://media.cwd-cdn.com/musical-sprouts/images/hero.png" />
@@ -43,8 +56,8 @@
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://musicalsprouts.com/pricing.html#webpage",
-        "url": "https://musicalsprouts.com/pricing.html",
+        "@id": "https://musicalsprouts.com/pricing#webpage",
+        "url": "https://musicalsprouts.com/pricing",
         "name": "Pricing & Registration — Musical Sprouts",
         "description": "Fall 2026 pricing for Musical Sprouts classes, memberships, and birthday parties in Collingwood.",
         "isPartOf": { "@id": "https://musicalsprouts.com/#website" },
@@ -104,7 +117,7 @@
       },
       {
         "@type": "FAQPage",
-        "@id": "https://musicalsprouts.com/pricing.html#faq",
+        "@id": "https://musicalsprouts.com/pricing#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -157,17 +170,17 @@
 
 <header class="site solid">
   <div class="wrap bar">
-    <a class="brand" href="index.html" aria-label="Musical Sprouts home">
+    <a class="brand" href="./" aria-label="Musical Sprouts home">
       <img class="brand-logo" src="https://media.cwd-cdn.com/musical-sprouts/images/logo-white.svg" width="42" height="42" alt="" data-logo-white="https://media.cwd-cdn.com/musical-sprouts/images/logo-white.svg" data-logo-colour="https://media.cwd-cdn.com/musical-sprouts/images/logo-colour.svg" />
       <span>Musical Sprouts</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">Menu</button>
     <nav class="main" id="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
+      <a href="./">Home</a>
       <a href="#classes">Classes</a>
       <a href="#pricing" aria-current="page">Pricing</a>
       <a href="#parties">Parties</a>
-      <a href="blog.html">Blog</a>
+      <a href="blog">Blog</a>
       <a href="#book">Book</a>
       <a href="#faq">FAQ</a>
     </nav>

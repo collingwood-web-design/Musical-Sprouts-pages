@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-CA">
 <head>
+    <script>
+      /* Prefer clean URLs when someone lands on the .html form (http/https only). */
+      (function () {
+        if (window.location.protocol === "file:") return;
+        var path = window.location.pathname;
+        if (!/\.html$/i.test(path)) return;
+        var clean = path.replace(/\.html$/i, "");
+        if (/\/index$/i.test(clean)) clean = clean.replace(/\/index$/i, "/") || "/";
+        if (clean === "") clean = "/";
+        window.location.replace(clean + window.location.search + window.location.hash);
+      })();
+    </script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Music &amp; the Developing Brain — Musical Sprouts | Collingwood, ON</title>
@@ -10,7 +23,7 @@
   <meta name="geo.region" content="CA-ON" />
   <meta name="geo.placename" content="Collingwood" />
   <meta name="theme-color" content="#6B9484" />
-  <link rel="canonical" href="https://musicalsprouts.com/blog.html" />
+  <link rel="canonical" href="https://musicalsprouts.com/blog" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="icon" href="https://media.cwd-cdn.com/musical-sprouts/images/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="https://media.cwd-cdn.com/musical-sprouts/images/favicon.png" />
@@ -25,7 +38,7 @@
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Musical Sprouts" />
   <meta property="og:locale" content="en_CA" />
-  <meta property="og:url" content="https://musicalsprouts.com/blog.html" />
+  <meta property="og:url" content="https://musicalsprouts.com/blog" />
   <meta property="og:title" content="Music &amp; the Developing Brain — Musical Sprouts" />
   <meta property="og:description" content="Connection, creativity, and growth in action through early childhood music." />
   <meta property="og:image" content="https://media.cwd-cdn.com/musical-sprouts/images/music-builds-language.jpg" />
@@ -41,7 +54,7 @@
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://musicalsprouts.com/blog.html#article",
+        "@id": "https://musicalsprouts.com/blog#article",
         "headline": "Music & the Developing Brain",
         "description": "How early childhood music shapes the brain, supports social connection, and builds language, literacy, and numeracy.",
         "image": "https://media.cwd-cdn.com/musical-sprouts/images/music-builds-language.jpg",
@@ -60,7 +73,7 @@
             "url": "https://media.cwd-cdn.com/musical-sprouts/images/logo-colour.svg"
           }
         },
-        "mainEntityOfPage": "https://musicalsprouts.com/blog.html",
+        "mainEntityOfPage": "https://musicalsprouts.com/blog",
         "inLanguage": "en-CA"
       },
       {
@@ -100,18 +113,18 @@
 
 <header class="site">
   <div class="wrap bar">
-    <a class="brand" href="index.html" aria-label="Musical Sprouts home">
+    <a class="brand" href="./" aria-label="Musical Sprouts home">
       <img class="brand-logo" src="https://media.cwd-cdn.com/musical-sprouts/images/logo-white.svg" width="42" height="42" alt="" data-logo-white="https://media.cwd-cdn.com/musical-sprouts/images/logo-white.svg" data-logo-colour="https://media.cwd-cdn.com/musical-sprouts/images/logo-colour.svg" />
       <span>Musical Sprouts</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">Menu</button>
     <nav class="main" id="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="index.html#classes">Classes</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="pricing.html#parties">Parties</a>
-      <a href="blog.html" aria-current="page">Blog</a>
-      <a href="index.html#book">Book</a>
+      <a href="./">Home</a>
+      <a href="./#classes">Classes</a>
+      <a href="pricing">Pricing</a>
+      <a href="pricing#parties">Parties</a>
+      <a href="blog" aria-current="page">Blog</a>
+      <a href="./#book">Book</a>
     </nav>
     <a class="btn btn-coral" href="https://calendly.com/contactmusicalsprouts/30min?month=2026-08" target="_blank" rel="noopener">Book a $20 trial</a>
   </div>
