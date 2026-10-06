@@ -584,6 +584,10 @@ section {
   padding: 11px 16px;
 }
 
+.cls .btn + .btn {
+  margin-top: 10px;
+}
+
 /* Pricing cards */
 .cards-section {
   margin-top: -64px;
