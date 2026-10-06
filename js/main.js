@@ -17,6 +17,11 @@
   updateHeader();
   window.addEventListener("scroll", updateHeader, { passive: true });
 
+  var now = new Date();
+  document.querySelectorAll("[data-expires]").forEach(function (el) {
+    if (now >= new Date(el.dataset.expires + "T00:00:00")) el.remove();
+  });
+
   if (!toggle || !nav) return;
 
   toggle.addEventListener("click", function () {
