@@ -6,9 +6,10 @@ Musical Sprouts offers early childhood music classes at Christ Our Hope Lutheran
 
 ## Site
 
-- [Home](https://musicalsprouts.com/): Overview, classes, how to book
+- [Home](https://musicalsprouts.com/): Overview, classes, how to book, contact form
 - [Pricing & registration](https://musicalsprouts.com/pricing): Trial, session, membership, drop-in, FAQ
 - [Blog](https://musicalsprouts.com/blog): Music and the developing brain
+- [Contact](https://musicalsprouts.com/contact): Ask about a class or a $20 trial
 
 ## Contact
 
