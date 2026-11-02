@@ -29,14 +29,37 @@
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     toggle.textContent = open ? "Close" : "Menu";
+    if (!open) {
+      nav.querySelectorAll(".nav-item.is-open").forEach(function (item) {
+        item.classList.remove("is-open");
+      });
+    }
+  });
+
+  nav.querySelectorAll(".nav-item > a").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      if (window.matchMedia("(max-width: 1100px)").matches) {
+        var item = link.parentElement;
+        if (item && item.querySelector(".nav-sub")) {
+          event.preventDefault();
+          item.classList.toggle("is-open");
+        }
+      }
+    });
   });
 
   nav.querySelectorAll("a").forEach(function (link) {
     link.addEventListener("click", function () {
+      if (link.parentElement && link.parentElement.classList.contains("nav-item") && link.parentElement.querySelector(".nav-sub") && window.matchMedia("(max-width: 1100px)").matches) {
+        return;
+      }
       nav.classList.remove("is-open");
       toggle.setAttribute("aria-expanded", "false");
       toggle.setAttribute("aria-label", "Open menu");
       toggle.textContent = "Menu";
+      nav.querySelectorAll(".nav-item.is-open").forEach(function (item) {
+        item.classList.remove("is-open");
+      });
     });
   });
 })();
